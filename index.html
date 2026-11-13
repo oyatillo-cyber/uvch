@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="UVCH"><meta name="theme-color" content="#185FA5"><link rel="icon" type="image/png" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icons/icon-192.png">
+<title>UVCH apparati</title>
+<style>
+:root{--bg:#faf9f5;--text-primary:#1f1e1d;--text-secondary:#5f5e5a;--text-muted:#888780;--border:rgba(0,0,0,.12);--border-strong:rgba(0,0,0,.28);--surface-1:#f1efe8;--bg-accent:#E6F1FB;--text-accent:#185FA5;--border-accent:#85B7EB;--bg-success:#EAF3DE;--text-success:#27500A;--border-success:#97C459;--text-danger:#A32D2D;--radius:8px}
+@media (prefers-color-scheme:dark){:root{--bg:#1f1e1d;--text-primary:#f1efe8;--text-secondary:#b4b2a9;--text-muted:#888780;--border:rgba(255,255,255,.15);--border-strong:rgba(255,255,255,.3);--surface-1:#2c2c2a;--bg-accent:#0C447C;--text-accent:#B5D4F4;--border-accent:#378ADD;--bg-success:#27500A;--text-success:#C0DD97;--border-success:#639922;--text-danger:#F09595}}
+*{box-sizing:border-box}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0;background:var(--bg);color:var(--text-primary);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6}
+main{max-width:720px;margin:0 auto;padding:20px 16px 40px}
+h1{font-size:22px;font-weight:500;margin:0 0 4px}.hd{display:flex;align-items:center;gap:14px;margin:0 0 12px}.hd img{width:72px;height:72px;border-radius:16px;flex:none}.hd .sub{margin:0}
+.sub{font-size:14px;color:var(--text-secondary);margin:0 0 16px}
+button{font:inherit;font-size:14px;padding:8px 14px;border:0.5px solid var(--border-strong);background:transparent;color:var(--text-primary);border-radius:var(--radius);cursor:pointer}
+button:hover{background:var(--surface-1)}
+input[type=range]{accent-color:var(--text-accent)}
+svg{display:block;width:100%;height:auto}
+.btn-m{flex:1;min-width:110px}
+.btn-m.on{border-color:var(--border-accent);background:var(--bg-accent);color:var(--text-accent)}
+.mc{background:var(--surface-1);border-radius:var(--radius);padding:.75rem 1rem}
+.mc p{margin:0}
+.st{flex:1;min-width:100px;padding:8px 10px;border:0.5px solid var(--border);border-radius:var(--radius);font-size:12px;color:var(--text-secondary);cursor:pointer;text-align:center}
+.st.done{background:var(--bg-success);color:var(--text-success);border-color:var(--border-success)}
+.st.cur{background:var(--bg-accent);color:var(--text-accent);border-color:var(--border-accent)}
+.cr{padding:8px 12px;border:0.5px solid var(--border);border-radius:var(--radius);font-size:13px}
+.cr label{display:flex;gap:8px;align-items:center;font-weight:500;cursor:pointer}
+.cr p{margin:2px 0 0 26px;font-size:12px;color:var(--text-secondary)}
+.cr.bad{border-color:var(--text-danger)}
+.cr.bad p,.cr.bad label{color:var(--text-danger)}
+.fl{opacity:.2;transition:opacity .3s}
+@media (prefers-reduced-motion:no-preference){@keyframes flow{to{stroke-dashoffset:-22}}.fl.on{animation:flow var(--d,1s) linear infinite}}
+.chip{display:inline-block;font-size:12px;padding:4px 10px;border-radius:var(--radius);background:var(--bg-accent);color:var(--text-accent);margin:0 6px 6px 0}
+.t,.ts,.th{fill:var(--text-primary);font-size:14px}
+.ts{font-size:12px;fill:var(--text-secondary)}
+.th{font-weight:500}
+.leader{stroke:var(--text-muted);stroke-width:.5;stroke-dasharray:3 3;fill:none}
+.c-blue{--f:#E6F1FB;--s:#185FA5;--a:#0C447C;--b:#185FA5}
+.c-teal{--f:#E1F5EE;--s:#0F6E56;--a:#085041;--b:#0F6E56}
+.c-gray{--f:#F1EFE8;--s:#5F5E5A;--a:#444441;--b:#5F5E5A}
+.c-green{--f:#EAF3DE;--s:#3B6D11;--a:#27500A;--b:#3B6D11}
+@media (prefers-color-scheme:dark){
+.c-blue{--f:#0C447C;--s:#85B7EB;--a:#B5D4F4;--b:#85B7EB}
+.c-teal{--f:#085041;--s:#5DCAA5;--a:#9FE1CB;--b:#5DCAA5}
+.c-gray{--f:#444441;--s:#B4B2A9;--a:#D3D1C7;--b:#B4B2A9}
+.c-green{--f:#27500A;--s:#97C459;--a:#C0DD97;--b:#97C459}}
+rect.c-blue,rect.c-teal,rect.c-gray,rect.c-green,circle.c-blue,circle.c-teal,circle.c-gray,circle.c-green,g.c-blue>rect,g.c-teal>rect,g.c-gray>rect,g.c-green>rect,g.c-blue>circle,g.c-teal>circle,g.c-gray>circle,g.c-green>circle{fill:var(--f);stroke:var(--s)}
+g[class^=c-]>.th{fill:var(--a)}
+g[class^=c-]>.ts{fill:var(--b)}
+</style>
+</head>
+<body>
+<main>
+<div class="hd"><img alt="UVCH apparati logotipi" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj4KPGRlZnM+CjxsaW5lYXJHcmFkaWVudCBpZD0iYmciIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMwYjIyNTIiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMwMjA4MTciLz48L2xpbmVhckdyYWRpZW50Pgo8bGluZWFyR3JhZGllbnQgaWQ9InBhZCIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzlmYzRmNSIvPjwvbGluZWFyR3JhZGllbnQ+CjxmaWx0ZXIgaWQ9ImciIHg9Ii0zMCUiIHk9Ii0zMCUiIHdpZHRoPSIxNjAlIiBoZWlnaHQ9IjE2MCUiPjxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjQiIHJlc3VsdD0iYiIvPjxmZU1lcmdlPjxmZU1lcmdlTm9kZSBpbj0iYiIvPjxmZU1lcmdlTm9kZSBpbj0iU291cmNlR3JhcGhpYyIvPjwvZmVNZXJnZT48L2ZpbHRlcj4KPC9kZWZzPgo8cmVjdCB4PSI4IiB5PSI4IiB3aWR0aD0iNDk2IiBoZWlnaHQ9IjQ5NiIgcng9IjExMCIgZmlsbD0idXJsKCNiZykiIHN0cm9rZT0iIzJmOGJmZiIgc3Ryb2tlLXdpZHRoPSI2IiBmaWx0ZXI9InVybCgjZykiLz4KPHBhdGggZD0iTTIyNiAzOGg2MHYyMmgyMnY2MGgtMjJ2MjJoLTYwdi0yMmgtMjJWNjBoMjJ6IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIDYpIHNjYWxlKDEpICIgZmlsbD0iIzNmYjBmZiIgZmlsdGVyPSJ1cmwoI2cpIiBvcGFjaXR5PSIwIi8+CjxwYXRoIGQ9Ik0yNDAgNDBoMzJ2MjZoMjZ2MzJoLTI2djI2aC0zMlY5OGgtMjZWNjZoMjZ6IiBmaWxsPSIjM2ZiMGZmIiBmaWx0ZXI9InVybCgjZykiLz4KPGcgZmlsdGVyPSJ1cmwoI2cpIiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiPgo8cGF0aCBkPSJNMTMwIDIzMiBxMzEgLTE0IDYyIDAgdDYyIDAgdDYyIDAgdDYyIDAiIHN0cm9rZT0iIzVhZDBmZiIgc3Ryb2tlLXdpZHRoPSI1Ii8+CjxwYXRoIGQ9Ik0xMzAgMjMyIHEzMSAtNDAgNjIgMCB0NjIgMCB0NjIgMCB0NjIgMCIgc3Ryb2tlPSIjMmY4YmZmIiBzdHJva2Utd2lkdGg9IjMuNSIgb3BhY2l0eT0iLjgiLz4KPHBhdGggZD0iTTEzMCAyMzIgcTMxIDQwIDYyIDAgdDYyIDAgdDYyIDAgdDYyIDAiIHN0cm9rZT0iIzJmOGJmZiIgc3Ryb2tlLXdpZHRoPSIzLjUiIG9wYWNpdHk9Ii44Ii8+CjxwYXRoIGQ9Ik0xMzAgMjMyIHEzMSAtNzIgNjIgMCB0NjIgMCB0NjIgMCB0NjIgMCIgc3Ryb2tlPSIjRUY5RjI3IiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLWRhc2hhcnJheT0iNyA3IiBvcGFjaXR5PSIuOSIvPgo8cGF0aCBkPSJNMTMwIDIzMiBxMzEgNzIgNjIgMCB0NjIgMCB0NjIgMCB0NjIgMCIgc3Ryb2tlPSIjRUY5RjI3IiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLWRhc2hhcnJheT0iNyA3IiBvcGFjaXR5PSIuOSIvPgo8L2c+CjxyZWN0IHg9IjY2IiB5PSIxNDYiIHdpZHRoPSI1MiIgaGVpZ2h0PSIxNzIiIHJ4PSIxNiIgZmlsbD0idXJsKCNwYWQpIiBzdHJva2U9IiMzZmIwZmYiIHN0cm9rZS13aWR0aD0iNSIgZmlsdGVyPSJ1cmwoI2cpIi8+CjxyZWN0IHg9IjM5NCIgeT0iMTQ2IiB3aWR0aD0iNTIiIGhlaWdodD0iMTcyIiByeD0iMTYiIGZpbGw9InVybCgjcGFkKSIgc3Ryb2tlPSIjM2ZiMGZmIiBzdHJva2Utd2lkdGg9IjUiIGZpbHRlcj0idXJsKCNnKSIvPgo8cmVjdCB4PSI4MCIgeT0iMTYwIiB3aWR0aD0iMjQiIGhlaWdodD0iMTQ0IiByeD0iOCIgZmlsbD0iIzFkNmZkOCIgb3BhY2l0eT0iLjM1Ii8+CjxyZWN0IHg9IjQwOCIgeT0iMTYwIiB3aWR0aD0iMjQiIGhlaWdodD0iMTQ0IiByeD0iOCIgZmlsbD0iIzFkNmZkOCIgb3BhY2l0eT0iLjM1Ii8+CjxwYXRoIGQ9Ik00MCAzNjJIMTkwTDIxNCAzNjIgMjMyIDMyMiAyNTIgMzk2IDI3MiAzNDAgMjg4IDM2Mkg0NzIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzVhZDBmZiIgc3Ryb2tlLXdpZHRoPSI1IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGZpbHRlcj0idXJsKCNnKSIvPgo8dGV4dCB4PSIyNTYiIHk9IjQ1MiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIEJsYWNrLEFyaWFsLEhlbHZldGljYSxzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iOTAwIiBmb250LXNpemU9IjEwNCIgZmlsbD0iI2Y0ZjdmZiI+VVZDSDwvdGV4dD4KPHRleHQgeD0iMjU2IiB5PSI0ODgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9IjcwMCIgZm9udC1zaXplPSIyOCIgbGV0dGVyLXNwYWNpbmc9IjkiIGZpbGw9IiM1YWI0ZmYiPkFQUEFSQVRJPC90ZXh0Pgo8L3N2Zz4K"><div><h1>UVCH apparati</h1>
+<p class="sub">Ishlash mexanizmi: usulni tanlang, quvvat va vaqtni o‘zgartiring, so‘ng «Boshlash» tugmasini bosing.</p></div></div>
+
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin:0 0 12px">
+<button class="btn-m on" data-m="cross">Ko‘ndalang usul</button>
+<button class="btn-m" data-m="long">Bo‘ylama usul</button>
+<button class="btn-m" data-m="uni">Bir tomonlama usul</button>
+</div>
+
+<svg viewBox="0 0 680 285" role="img">
+<title>UVCH apparati va elektrodlar</title>
+<desc>Apparat, ulagich simlari, elektrodlar va davolanadigan sohadagi elektromagnit maydon</desc>
+<rect class="c-gray" x="270" y="240" width="290" height="8" rx="3" stroke-width="0.5"/>
+<rect class="c-gray" x="50" y="220" width="80" height="8" rx="3" stroke-width="0.5"/>
+<circle class="c-gray" cx="62" cy="240" r="8" stroke-width="0.5"/>
+<circle class="c-gray" cx="118" cy="240" r="8" stroke-width="0.5"/>
+<g class="c-blue">
+<rect x="20" y="50" width="140" height="170" rx="10" stroke-width="0.5"/>
+<text class="ts" x="90" y="196" text-anchor="middle" dominant-baseline="central">Elektron generator</text>
+<text class="th" x="100" y="150" id="pw" text-anchor="middle" dominant-baseline="central">30 W</text>
+</g>
+<g class="c-teal">
+<rect x="34" y="64" width="112" height="44" rx="4" stroke-width="0.5"/>
+<text class="ts" x="90" y="78" text-anchor="middle" dominant-baseline="central">Taymer</text>
+<text class="th" x="90" y="95" id="disp" text-anchor="middle" dominant-baseline="central">10:00</text>
+</g>
+<circle id="lamp" class="c-gray" cx="48" cy="150" r="6" stroke-width="0.5"/>
+<path id="ca" fill="none" stroke="#888780" stroke-width="2" stroke-linecap="round"/>
+<path id="cb" fill="none" stroke="#888780" stroke-width="2" stroke-linecap="round"/>
+<rect id="limb" x="290" y="120" width="240" height="80" rx="36" fill="#F0C9B0" stroke="var(--border-strong)" stroke-width="0.5"/>
+<rect id="heat" x="290" y="120" width="240" height="80" rx="36" fill="#E24B4A" opacity="0" style="pointer-events:none"/>
+<g id="fld" fill="none" stroke="#EF9F27" stroke-width="1.5" stroke-dasharray="6 5" stroke-linecap="round"></g>
+<rect id="pa" class="c-teal" rx="3" stroke-width="0.5"/>
+<rect id="pb" class="c-teal" rx="3" stroke-width="0.5"/>
+<line x1="530" y1="160" x2="548" y2="160" class="leader"/>
+<text class="ts" x="554" y="156" dominant-baseline="central">Davolanadigan</text>
+<text class="ts" x="554" y="172" dominant-baseline="central">soha</text>
+<rect class="c-teal" x="290" y="262" width="22" height="8" rx="2" stroke-width="0.5"/>
+<text class="ts" x="320" y="266" dominant-baseline="central">Elektrod</text>
+<line x1="395" y1="266" x2="421" y2="266" stroke="#EF9F27" stroke-width="1.5" stroke-dasharray="6 5"/>
+<text class="ts" x="429" y="266" dominant-baseline="central">Elektromagnit maydon</text>
+</svg>
+
+<p id="mi" style="font-size:13px;color:var(--text-secondary);margin:8px 0 0"></p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:12px 0">
+<div class="mc"><p style="font-size:13px;color:var(--text-secondary)">Qolgan vaqt</p><p style="font-size:24px;font-weight:500" id="m1">10:00</p></div>
+<div class="mc"><p style="font-size:13px;color:var(--text-secondary)">Quvvat</p><p style="font-size:24px;font-weight:500" id="m2">30 W</p></div>
+<div class="mc"><p style="font-size:13px;color:var(--text-secondary)">Maydon kuchi</p><p style="font-size:24px;font-weight:500" id="m3">Past</p></div>
+<div class="mc"><p style="font-size:13px;color:var(--text-secondary)">To‘qima harorati</p><p style="font-size:24px;font-weight:500" id="m4">36.6 °C</p></div>
+<div class="mc"><p style="font-size:13px;color:var(--text-secondary)">Berilgan doza</p><p style="font-size:24px;font-weight:500" id="m5">0.0 kJ</p></div>
+</div>
+
+<div style="display:flex;align-items:center;gap:12px;margin:0 0 8px"><label for="sp" style="font-size:14px;color:var(--text-secondary);min-width:60px">Quvvat</label><input type="range" id="sp" min="10" max="100" step="5" value="30" style="flex:1"><span id="vp" style="font-size:14px;font-weight:500;min-width:52px;text-align:right">30 W</span></div>
+<div style="display:flex;align-items:center;gap:12px;margin:0 0 12px"><label for="st" style="font-size:14px;color:var(--text-secondary);min-width:60px">Vaqt</label><input type="range" id="st" min="1" max="15" step="1" value="10" style="flex:1"><span id="vt" style="font-size:14px;font-weight:500;min-width:52px;text-align:right">10 daq</span></div>
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 6px"><button id="go">Boshlash</button><span id="msg" style="font-size:13px;color:var(--text-secondary)">Vaqt tezlashtirilgan: 1 soniya taxminan 1 daqiqaga teng.</span></div>
+<p id="wn" style="font-size:13px;color:var(--text-danger);margin:0 0 6px;min-height:18px"></p>
+<p id="err" style="font-size:13px;color:var(--text-danger);margin:0 0 12px;min-height:18px"></p>
+
+<div style="display:flex;gap:6px;flex-wrap:wrap;margin:0 0 8px" id="steps">
+<div class="st" data-i="0">1. Tarmoqqa ulanadi</div>
+<div class="st" data-i="1">2. Generator tebranish hosil qiladi</div>
+<div class="st" data-i="2">3. Elektrodlar qo‘yiladi</div>
+<div class="st" data-i="3">4. Maydon hosil bo‘ladi</div>
+<div class="st" data-i="4">5. To‘qimalarda issiqlik</div>
+</div>
+<p id="sd" style="font-size:14px;color:var(--text-secondary);margin:0 0 1.25rem;min-height:44px">Bosqichni bosing yoki «Boshlash» tugmasini bosib kuzating.</p>
+
+<p style="font-size:13px;color:var(--text-secondary);margin:0 0 8px">Qarshi ko‘rsatmalar va ular nima uchun xavfli (belgilansa, muolaja boshlanmaydi). Ro‘yxat to‘liq emas: shubha bo‘lsa, avval shifokorga murojaat qiling.</p>
+<div style="display:grid;gap:8px;margin:0 0 1rem" id="ci">
+<div class="cr"><label><input type="checkbox">Yomon sifatli o‘sma</label><p>UVCH qon aylanishi va moddalar almashinuvini faollashtiradi hamda to‘qimani isitadi. Bu o‘sma hujayralarining o‘sishiga va tarqalishiga yordam berishi mumkin. Tashxisi aniq bo‘lmagan shishlar va o‘sma tarixi bo‘lgan sohalarga ham issiqlik berilmaydi.</p></div>
+<div class="cr"><label><input type="checkbox">Faol qon ketish</label><p>Muolaja qon tomirlarini kengaytirib, qon aylanishini kuchaytiradi. Natijada qon ketish ko‘payib ketishi mumkin. Yangi jarohat, operatsiyadan keyingi erta davr va qon ivishi buzilgan holatlar (gemofiliya, qon suyultiruvchi dorilar) ham shu guruhga kiradi.</p></div>
+<div class="cr"><label><input type="checkbox">Yurak stimulyatori</label><p>Yuqori chastotali elektromagnit maydon stimulyator ishiga xalaqit beradi. U noto‘g‘ri ishlashi yoki buzilishi mumkin, bu esa yurak uchun xavfli. Xuddi shu xavf boshqa elektron implantlarga (insulin nasosi, nerv stimulyatori, eshituv implanti) ham tegishli.</p></div>
+<div class="cr"><label><input type="checkbox">Sezuvchanlik buzilishi</label><p>Muolajada to‘qimalarda issiqlik hosil bo‘ladi. Sezuvchanlik buzilgan bo‘lsa, bemor haddan tashqari qizishni sezmaydi va kuyish xavfi paydo bo‘ladi. Qon aylanishi buzilgan sohalarda (diabet, tomir kasalliklari) issiqlik tarqalmay, xavf yanada oshadi.</p></div>
+<div class="cr"><label><input type="checkbox">Homiladorlik (ayrim sohalar)</label><p>Maydon ta’siri homila rivojlanishiga salbiy ta’sir qilishi mumkin. Shuning uchun ayrim sohalarga ta’sir qilinmaydi, buni faqat shifokor hal qiladi. Qorin va chanoq sohasiga ta’sir qilish ayniqsa taqiqlanadi.</p></div>
+<div class="cr"><label><input type="checkbox">Metall implantlar va buyumlar</label><p>Metall (plastinka, vint, endoprotez, zirak, taqinchoq) maydonda tez qiziydi va atrofdagi to‘qimani kuydirishi mumkin. Muolajadan oldin barcha metall buyumlar olib qo‘yiladi, ichki implantlar borligini shifokorga aytish shart.</p></div>
+<div class="cr"><label><input type="checkbox">Yiringli yallig‘lanish va yuqori harorat</label><p>Issiqlik yiringli jarayonni chuqurga tarqatib, sepsisga olib kelishi mumkin. Isitma, o‘tkir infeksiya va faol sil kasalligida muolaja qilinmaydi.</p></div>
+<div class="cr"><label><input type="checkbox">Tromboz va tromboflebit</label><p>Qon aylanishi kuchayganda tomirdagi quyqa (tromb) ko‘chib, o‘pka arteriyasini yopib qo‘yishi mumkin. Bu hayot uchun xavfli holat.</p></div>
+<div class="cr"><label><input type="checkbox">Bolalarda o‘sish zonalari</label><p>Bolalarning suyaklari o‘sish zonalari maydon ta’siriga sezgir. Bu zonalarga ta’sir qilish suyak o‘sishiga xalaqit berishi mumkin, shuning uchun bolalarda faqat shifokor belgilagan past dozada qo‘llanadi.</p></div>
+<div class="cr"><label><input type="checkbox">Nam kiyim, bog‘lam yoki teri shikastlanishi</label><p>Namlik issiqlikni notekis tarqatadi va teri kuyishiga olib keladi. Ochiq jarohat va yangi chandiq ustida ham elektrod qo‘yilmaydi.</p></div>
+</div>
+
+<p style="font-size:13px;color:var(--text-secondary);margin:0 0 8px">Qo‘llanilishi (shifokor tavsiyasi bilan)</p>
+<div><span class="chip">LOR kasalliklari</span><span class="chip">Bo‘g‘im va mushaklar</span><span class="chip">Nafas yo‘llari</span><span class="chip">Yumshoq to‘qimalar</span></div>
+
+<p style="font-size:12px;color:var(--text-muted);margin:1.5rem 0 0">Bu o‘quv modeli. Quvvat va maydon kuchi haqiqiy doza emas. Muolaja faqat tibbiyot mutaxassisi nazorati ostida bajariladi.</p>
+</main>
+
+<script>
+var S={m:"cross",p:30,min:10,rem:600,run:false,t:null,sel:-1};
+var D=["Apparat elektr tarmog‘iga ulanadi.","Generator yuqori chastotali elektr tebranishlarini hosil qiladi.","Elektrodlar bemorning kerakli tana qismiga joylashtiriladi.","Elektrodlar orasida elektromagnit maydon hosil bo‘ladi.","Maydon to‘qimalarga ta’sir qiladi, natijada issiqlik hosil bo‘lishi mumkin."];
+var G={
+cross:{i:"Ko‘ndalang usul: elektrodlar sohaning ikki yonida, maydon to‘qimani butun qalinligi bo‘ylab o‘tadi. Chuqur va bir tekis isitadi.",pa:[340,100,140,10],pb:[340,210,140,10],ca:"M160 100 L300 100 L300 105 L340 105",cb:"M160 175 L250 175 L250 215 L340 215",f:function(){var s="";for(var x=360;x<=460;x+=20)s+='<path class="fl" d="M'+x+' 110 L'+x+' 210"/>';return s}},
+long:{i:"Bo‘ylama usul: elektrodlar soha bo‘ylab bir tomonda, maydon uzunasiga o‘tadi. O‘rta chuqurlikda, cho‘zinchoq sohalar uchun.",pa:[310,100,70,10],pb:[440,100,70,10],ca:"M160 100 L310 105",cb:"M160 85 L475 85 L475 100",f:function(){return '<path class="fl" d="M330 110 Q410 195 490 110"/><path class="fl" d="M345 110 Q410 170 475 110"/><path class="fl" d="M360 110 Q410 148 460 110"/>'}},
+uni:{i:"Bir tomonlama usul: elektrodlar yonma-yon, maydon yuza qatlamlarda tarqaladi. Yuzaki isitadi, chuqurga deyarli yetmaydi.",pa:[370,100,40,10],pb:[420,100,40,10],ca:"M160 100 L370 105",cb:"M160 85 L440 85 L440 100",f:function(){return '<path class="fl" d="M380 110 Q415 160 450 110"/><path class="fl" d="M392 110 Q415 140 438 110"/>'}}
+};
+function $(i){return document.getElementById(i)}
+function fmt(s){s=Math.max(0,Math.ceil(s));var m=Math.floor(s/60),r=s%60;return (m<10?"0":"")+m+":"+(r<10?"0":"")+r}
+function lvl(){return S.p<=30?"Past":S.p<=60?"O‘rta":"Yuqori"}
+function geo(){var g=G[S.m],a=g.pa,b=g.pb,p=$("pa"),q=$("pb");
+p.setAttribute("x",a[0]);p.setAttribute("y",a[1]);p.setAttribute("width",a[2]);p.setAttribute("height",a[3]);
+q.setAttribute("x",b[0]);q.setAttribute("y",b[1]);q.setAttribute("width",b[2]);q.setAttribute("height",b[3]);
+$("ca").setAttribute("d",g.ca);$("cb").setAttribute("d",g.cb);$("fld").innerHTML=g.f();$("mi").textContent=g.i;fx()}
+function fx(){var on=S.run,o=0.25+S.p/100*0.7,d=(2.2-S.p/100*1.6).toFixed(2)+"s";
+document.querySelectorAll("#fld .fl").forEach(function(e){e.classList.toggle("on",on);e.style.opacity=on?o:"";e.style.setProperty("--d",d)})}
+function view(){var tot=S.min*60,pr=1-S.rem/tot;
+var tp=S.run?36.6+S.p/100*4.4*(0.3+0.7*pr):36.6,dz=S.p*(tot-S.rem)/1000;
+$("m4").textContent=tp.toFixed(1)+" °C";$("m5").textContent=dz.toFixed(1)+" kJ";
+$("wn").textContent=S.p>60?"Diqqat: yuqori quvvatda to‘qima ortiqcha qiziydi va kuyish xavfi oshadi. Odatda past yoki o‘rta quvvat qo‘llanadi.":"";
+$("disp").textContent=fmt(S.rem);$("m1").textContent=fmt(S.rem);
+$("pw").textContent=S.p+" W";$("m2").textContent=S.p+" W";$("m3").textContent=lvl();
+$("vp").textContent=S.p+" W";$("vt").textContent=S.min+" daq";
+$("lamp").setAttribute("class",S.run?"c-green":"c-gray");
+$("heat").setAttribute("opacity",S.run?Math.min(0.5,S.p/100*0.5*(0.3+0.7*pr)).toFixed(3):0);
+$("go").textContent=S.run?"To‘xtatish":"Boshlash";
+var cur=S.run?Math.min(4,Math.floor(pr*5)):S.sel;
+document.querySelectorAll(".st").forEach(function(e){var i=+e.dataset.i;e.className="st"+(S.run&&i<cur?" done":"")+(i===cur?" cur":"")});
+if(cur>=0)$("sd").textContent=D[cur];fx()}
+function stop(){S.run=false;clearInterval(S.t);view()}
+function bad(){var r=[];document.querySelectorAll("#ci .cr").forEach(function(e){var c=e.querySelector("input").checked;e.classList.toggle("bad",c);if(c)r.push(e.querySelector("label").textContent.trim())});return r}
+$("go").onclick=function(){
+if(S.run){stop();return}
+var b=bad();if(b.length>0){$("err").textContent="Muolaja boshlanmaydi: "+b.join(", ")+". Sababini pastda o‘qing va shifokorga murojaat qiling.";return}
+$("err").textContent="";$("msg").textContent="Vaqt tezlashtirilgan: 1 soniya taxminan 1 daqiqaga teng.";
+if(S.rem<=0)S.rem=S.min*60;S.run=true;view();
+S.t=setInterval(function(){S.rem-=6;if(S.rem<=0){S.rem=0;stop();$("msg").textContent="Muolaja tugadi.";S.rem=S.min*60;$("disp").textContent="00:00";$("m1").textContent="00:00";return}view()},100)};
+$("sp").oninput=function(){S.p=+this.value;view()};
+$("st").oninput=function(){S.min=+this.value;S.rem=S.min*60;view()};
+document.querySelectorAll(".btn-m").forEach(function(b){b.onclick=function(){S.m=b.dataset.m;document.querySelectorAll(".btn-m").forEach(function(x){x.classList.toggle("on",x===b)});geo();view()}});
+document.querySelectorAll(".st").forEach(function(e){e.onclick=function(){if(S.run)return;S.sel=+e.dataset.i;view()}});
+document.querySelectorAll("#ci input").forEach(function(e){e.onchange=function(){var b=bad();if(b.length===0)$("err").textContent="";else if(S.run){stop();$("err").textContent="Muolaja to‘xtatildi: "+b.join(", ")+"."}}});
+geo();view();
+</script>
+<script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(){})})}</script>
+</body>
+</html>
